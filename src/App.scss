@@ -1,0 +1,44 @@
+@import 'animate.css';
+
+@font-face {
+  src: url(./assets/fonts/Metropolis-Regular.otf);
+  font-family: 'Metropolis-Regular';
+}
+@font-face {
+  src: url(./assets/fonts/Metropolis-Bold.otf);
+  font-family: 'Metropolis-Bold';
+}
+
+// GLOBAL STYLING
+
+$primary-color: #cf1c1c;
+$background-color: #f6f6f6;
+$font-color: #353535;
+$font-regular: 'Metropolis-Regular', 'sans-seriff';
+$font-bold: 'Metropolis-Bold', 'sans-seriff';
+
+
+input, textarea {
+  font-family: $font-regular;
+}
+
+h1 {
+  font-family: $font-bold;
+  color: $font-color;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}

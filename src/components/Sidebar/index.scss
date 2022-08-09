@@ -1,0 +1,106 @@
+
+.navigation {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        padding: 20px 30px 0 30px;
+
+        @media screen and (max-width: 800px){
+            width: 100%;
+            padding: 20px 0 0 0;
+        }
+
+        &:before {
+            content: '';
+            background: #eeeeee;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 20px 20px 0 0;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        a {
+            font-size: 25px;
+            padding: 10px 20px;
+            color: #4d4d4e;
+            display: block;
+            line-height: 40px;
+            position: relative;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 800px){
+                line-height: 30px;
+                margin: 0;
+            }
+
+            i {
+                transition: 0.3s ease-out;
+            }
+
+            &:hover, &:focus {
+                svg {
+                    color: #b1b1b1;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+
+            span {
+                font-size: 0.75rem;
+                color: #4d4d4e;
+            }
+
+        }
+
+        a.active {
+            svg {
+                color: #cf1c1c;
+                transition: 0.2s ease-in-out;
+            }
+
+            span {
+                color: #cf1c1c;
+                transition: 0.2s ease-in-out;
+            }
+        }
+    }
+
+    ul {
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        a {
+            padding: 7px 0;
+            display: block;
+            font-size: 15px;
+            line-height: 16px;
+
+            &:hover {
+                svg {
+                    color: #ffd700;
+                }
+            }
+        }
+    }
+}
