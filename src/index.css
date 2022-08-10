@@ -22,6 +22,12 @@ body {
   background: #f6f6f6;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 a {
   text-decoration: none;
   color: #353535;

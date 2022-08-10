@@ -1,0 +1,39 @@
+.top-letters {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    top: 30px;
+    left: 30px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
+    
+    div {
+        transition: 0.3s ease-in-out;
+        font-size: 1.5rem;
+        font-family: 'Metropolis-Bold';
+        position: absolute;
+    }
+
+    .tb {
+        opacity: 1;
+        transition: 0.2s ease-out;
+    }
+
+    .tb.hidden {
+        opacity: 0;
+    }
+
+    .go-home {
+        opacity: 0;
+        transition: 0.2s ease-in;
+    }
+
+    .go-home.show {
+        opacity: 1;
+    }
+
+    
+}

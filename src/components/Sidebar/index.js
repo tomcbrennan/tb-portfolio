@@ -4,7 +4,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 // import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Sidebar = () => (
+export default function Sidebar() {
+
+    // RETRACT MENU ON SCROLL
+
+    // const navigation = document.querySelector('.navigation');
+    // let previousScrollPosition = window.pageYOffset;
+
+    // window.onscroll = () => {
+    //     let currentScrollPosition = window.pageYOffset;
+
+    //     if(currentScrollPosition > previousScrollPosition){
+    //         navigation.style.bottom = '-100px';
+    //     } else {
+    //         navigation.style.bottom = '0px';
+    //     }
+
+    //     previousScrollPosition = currentScrollPosition;
+    // }
+
+
+  return (
     <div className="navigation">
         <nav>
             <NavLink exact="true" activeclassname="active" to="/">
@@ -37,6 +57,5 @@ const Sidebar = () => (
             </li>
         </ul> */}
     </div>
-)
-
-export default Sidebar
+  )
+}

@@ -2,21 +2,20 @@
 .page {
     width: 100%;
     height: 100%;
-    position: absolute;
 }
 
 .container {
     width: 100%;
-    will-change: contents;
-    height: 90%;
-    min-height: 566px;
+    height: 100%;
     opacity: 0;
-    top: 5%;
     margin: 0 auto;
     z-index: 1;
-    transform-style: preserve-3d;
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.3s;
+    animation: fadeIn 1s forwards 0.3s;
+    padding: 200px 100px 100px 100px;
+
+    @media screen and (max-width: 900px) {
+        padding: 150px 25px 100px 25px;
+    }
 }
 
 .btn {
@@ -25,6 +24,10 @@
     border-radius: 100px;
     transition: 0.2s ease-in-out;
     text-align: center;
+
+    @media screen and (max-width: 800px) {
+        padding: 1rem 1.5rem;
+    }
 
     // &:hover,&:focus {
         
@@ -48,34 +51,3 @@
     right: 30px;
     z-index: 1;
 }
-
-.home-initials {
-    position: fixed;
-    height: 30px;
-    width: 30px;
-    top: 30px;
-    left: 30px;
-    text-align: center;
-    display: grid;
-    place-items: center;
-    z-index: 100;
-    animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
-    
-    span{
-        transition: 0.3s ease-in-out;
-        font-size: 1.5rem;
-        font-family: 'Metropolis-Bold';
-    }
-}
-
-// .cursor {
-//     width: 30px;
-//     height: 30px;
-//     border: 2px solid #cf1c1c;
-//     border-radius: 50%;
-//     position: absolute;
-//     z-index: 10000000;
-//     transition-duration: 0.1s;
-//     transition-timing-function: ease-out;
-//     pointer-events: none;
-// }
