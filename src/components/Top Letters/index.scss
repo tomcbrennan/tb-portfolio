@@ -9,12 +9,40 @@
     place-items: center;
     z-index: 100;
     animation: slide-in-blurred-bottom 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s both;
+
+    &:hover {
+       div {
+        color: #f6f6f6;
+
+            &:after {
+                transform: translate(-50%, -50%) scale(0.75);
+                opacity: 1;
+            }
+       }
+    }
     
     div {
         transition: 0.3s ease-in-out;
         font-size: 1.5rem;
         font-family: 'Metropolis-Bold';
         position: absolute;
+        padding: 2rem;
+        color: #353535;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: #B65D13;
+            height: 100%;
+            width: 100%;
+            transition: 0.3s ease-in-out;
+            opacity: 0;
+            border-radius: 50%;
+            z-index: -1;
+        }
     }
 
     .tb {

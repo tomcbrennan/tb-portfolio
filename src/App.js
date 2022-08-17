@@ -8,19 +8,22 @@ import Contact from './components/Contact';
 import LittleGreenPharma from './components/Projects/Little Green Pharma';
 import RemoPapini from './components/Projects/Remo Papini'
 
+
 export default function App() {
 
   return (
-    <Routes>
-      <Route path="/" element={<Layout />} >
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portfolio/little-green-pharma" element={<LittleGreenPharma />} />
-        <Route path="/portfolio/remo-papini" element={<RemoPapini />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio/little-green-pharma" element={<LittleGreenPharma />} />
+          <Route path="/portfolio/remo-papini" element={<RemoPapini />} />
+        </Route>
+      </Routes>
+    </>
   )
 }

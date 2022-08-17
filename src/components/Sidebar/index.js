@@ -2,27 +2,24 @@ import { NavLink } from 'react-router-dom';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
-// import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useScrollPosition } from '../../hooks/useScrollPosition';
 
 export default function Sidebar() {
 
-    // RETRACT MENU ON SCROLL
+    const navigation = document.querySelector('.navigation');
+    let previousScrollPosition = useScrollPosition();
 
-    // const navigation = document.querySelector('.navigation');
-    // let previousScrollPosition = window.pageYOffset;
+    window.onscroll = () => {
+        let currentScrollPosition = window.pageYOffset;
 
-    // window.onscroll = () => {
-    //     let currentScrollPosition = window.pageYOffset;
+        if(currentScrollPosition > previousScrollPosition){
+            navigation.style.bottom = '-100px';
+        } else {
+            navigation.style.bottom = '0';
+        }
 
-    //     if(currentScrollPosition > previousScrollPosition){
-    //         navigation.style.bottom = '-100px';
-    //     } else {
-    //         navigation.style.bottom = '0px';
-    //     }
-
-    //     previousScrollPosition = currentScrollPosition;
-    // }
-
+        previousScrollPosition = currentScrollPosition;
+    }
 
   return (
     <div className="navigation">

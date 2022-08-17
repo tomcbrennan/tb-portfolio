@@ -62,3 +62,36 @@ h4 {
     font-size: 1rem;
   }
 }
+
+.cursor-dot-outline, .cursor-dot {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #cf1c1c;
+  z-index: 10000000000;
+
+  @media screen and (max-width: 900px){
+    display: none;
+  }
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(229, 128, 128, 0.5);
+  z-index: 10000000000;
+
+  @media screen and (max-width: 900px){
+    display: none;
+  }
+}
