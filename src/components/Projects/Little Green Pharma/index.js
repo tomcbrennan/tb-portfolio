@@ -1,4 +1,5 @@
 import './index.scss';
+import '../allProjects.scss';
 
 export default function LittleGreenPharma() {
   return (
@@ -10,7 +11,7 @@ export default function LittleGreenPharma() {
             <h2>Making a world of difference.</h2>
           </div>
         </div>
-        <div className="image">
+        <div className="project-image">
           
         </div>
     </div>

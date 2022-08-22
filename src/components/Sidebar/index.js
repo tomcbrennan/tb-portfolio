@@ -2,12 +2,12 @@ import { NavLink } from 'react-router-dom';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { useScrollPosition } from '../../hooks/useScrollPosition';
+import { UseScrollPosition } from '../../hooks/UseScrollPosition';
 
 export default function Sidebar() {
 
     const navigation = document.querySelector('.navigation');
-    let previousScrollPosition = useScrollPosition();
+    let previousScrollPosition = UseScrollPosition();
 
     window.onscroll = () => {
         let currentScrollPosition = window.pageYOffset;

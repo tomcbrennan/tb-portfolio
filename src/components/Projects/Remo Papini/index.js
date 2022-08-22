@@ -1,4 +1,5 @@
 import './index.scss';
+import '../allProjects.scss';
 
 export default function RemoPapini() {
   return (
