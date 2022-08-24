@@ -6,13 +6,14 @@ import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Home() {
+
   return (
-    <div className="homepage">
+    <div className="homepage fade-in">
         <div className="homepage-content">
             <h1>Tom Brennan.</h1>
             <h2>digital designer + developer</h2>
             <img src={Logo} className="logo" alt="Logo" />
-            <Link to="/portfolio" className="btn btn-filled">View my work<FontAwesomeIcon icon={faLongArrowAltRight} color="#f4f4f4" /></Link>
+            <Link to="/portfolio" className="btn btn-filled">Explore my work<FontAwesomeIcon icon={faLongArrowAltRight} color="#f4f4f4" /></Link>
         </div>
     </div>
   )

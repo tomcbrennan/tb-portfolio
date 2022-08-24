@@ -1,10 +1,73 @@
-.project-intro {
-    h1 {
-        animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+.project-banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  h1 {
+      animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
+      margin-bottom: 0;
+  }
+  h2 {
+      animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
+  }
+
+  .buttons {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    margin-top: 6rem;
+
+    .btn-project {
+      font-size: 1.25rem;
+      font-weight: 400;
+      position: relative;
+      min-width: 300px;
+      width: 100%;
+      padding: 2rem 2rem 2rem 0;
+      text-align: left;
+      color: #a1a1a1;
+      border-radius: 0;
+
+      svg {
+        color: #a1a1a1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #cf1c1c;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+      }
+
+      &:hover {
+        color: #cf1c1c;
+
+        svg {
+          color: #cf1c1c;
+        }
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
     }
-    h2 {
-        animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #d0d0d0;
     }
+  }
 }
 
 @keyframes fade-in-bottom {

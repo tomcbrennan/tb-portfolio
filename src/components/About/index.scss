@@ -33,6 +33,10 @@
         max-width: 800px;
         width: 100%;
 
+        @media screen and (min-width: 1800px){
+            max-width: unset;
+        }
+
         span {
             position: relative;
             overflow: hidden;
@@ -68,8 +72,9 @@
     }
 }
 
-.skills-content {
+.skills-section {
     width: 100%;
+    background-color: #353535;
 
 
     .skills-grid {

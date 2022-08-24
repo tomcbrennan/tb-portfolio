@@ -12,7 +12,7 @@ export default function Projects() {
     { 
       title: 'Premier League App', 
       url: '/portfolio/premier-league-app', 
-      body: 'Live Premier League scores & statistics.',
+      body: 'Live premier league scores & statistics.',
       date: '2020', 
       tech: 'Next JS, Rapid API',
       id: 1, 
@@ -30,7 +30,7 @@ export default function Projects() {
     { 
       title: 'Little Green Pharma', 
       url: '/portfolio/little-green-pharma', 
-      body: 'Making a world of difference.', 
+      body: 'Making a world of difference.',
       date: '2022',
       tech: 'Wordpress, mySQL, PHP, Figma',
       id: 3, 
@@ -57,7 +57,7 @@ export default function Projects() {
     { 
       title: 'Party on the Green', 
       url: '/portfolio/party-on-the-green', 
-      body: "Perth's Premier Mobile Mini Golf",
+      body: "Perth's premier mobile mini golf.",
       date: '2021', 
       tech: 'Wordpress, mySQL, PHP',
       id: 6, 
@@ -105,10 +105,9 @@ export default function Projects() {
   }, []);
   
 
-
   return (
     <div className="projects">
-        <h1>My latest work</h1>
+        <h2>My latest work</h2>
         <div className="projects-grid">
           {projects.map((project) => (
             <NavLink className={ `project-tile ${project.name}` } to={ project.url } key={ project.id }>
